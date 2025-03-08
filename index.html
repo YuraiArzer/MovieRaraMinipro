@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MovieRaRa - สุ่มหนังสนุกๆ</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1 class="logo">MovieRaRa</h1>
+    <p>สุ่มหนังสนุกๆ แบบ Netflix Style</p>
+  </header>
+
+  <main>
+    <section class="search-bar">
+      <input type="text" id="search-input" placeholder="ค้นหาหนัง...">
+      <button id="search-btn"><i class="fas fa-search"></i></button>
+    </section>
+
+    <section class="category-selector">
+      <label for="category">เลือกหมวดหมู่:</label>
+      <select id="category">
+        <option value="">สุ่มหนังทั้งหมด</option> <!-- เพิ่มบรรทัดนี้ -->
+        <option value="28">Action</option>
+        <option value="12">Adventure</option>
+        <option value="16">Animation</option>
+        <option value="35">Comedy</option>
+        <option value="80">Crime</option>
+        <option value="99">Documentary</option>
+        <option value="18">Drama</option>
+        <option value="10751">Family</option>
+        <option value="14">Fantasy</option>
+        <option value="36">History</option>
+        <option value="27">Horror</option>
+        <option value="10402">Music</option>
+        <option value="9648">Mystery</option>
+        <option value="10749">Romance</option>
+        <option value="878">Science Fiction</option>
+        <option value="53">Thriller</option>
+        <option value="10752">War</option>
+        <option value="37">Western</option>
+      </select>
+      </select>
+      <button id="random-movie">สุ่มหนัง</button>
+    </section>
+
+    <section class="movie-result">
+      <div id="movie-details"></div>
+      <div class="action-buttons">
+        <button id="like-btn"><i class="fas fa-heart"></i> บันทึก</button>
+        <button id="share-btn"><i class="fas fa-share-alt"></i> แชร์</button>
+      </div>
+      <div class="recommended-movies">
+        <h2>หนังแนะนำอื่นๆ</h2>
+        <div class="scroll-container">
+          <button class="scroll-btn left" onclick="scrollRecommended('left')"><i class="fas fa-chevron-left"></i></button>
+          <div class="recommended-grid"></div>
+          <button class="scroll-btn right" onclick="scrollRecommended('right')"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="liked-movies">
+      <h2>หนังที่คุณชอบ</h2>
+      <div class="liked-grid"></div>
+    </section>
+
+    <!-- เพิ่มพื้นที่ว่างสำหรับตกแต่ง -->
+    <section class="featured-section">
+      <h2>หนังแนะนำประจำสัปดาห์</h2>
+      <div class="featured-grid"></div>
+    </section> 
+    <!-- เพิ่มส่วนแสดงตัวอย่างหนัง -->
+    <section class="trailer-section">
+     <h2>ตัวอย่างหนัง</h2>
+     <div class="trailer-container">
+      <iframe id="trailer" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      </section>
+  </main>
+
+  <footer>
+    <p>สร้างโดย MovieRaRa | ใช้ API จาก TMDb และ YouTube</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
